@@ -5,4 +5,9 @@ export default function(state, action) {
   }
 
   // Action #1: Populate the state with flats
+  if (action.type === 'SET_FLATS') {
+    return action.payload;
+  } else {
+    return state;
+  }
 }

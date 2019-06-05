@@ -28,8 +28,8 @@
   },
   "dependencies": {
     "google-map-react": "^1.1.4",
-    "react": "16.4",
-    "react-dom": "16.4",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3",
     "react-redux": "^7.0.3",
     "redux": "^4.0.1"
   },

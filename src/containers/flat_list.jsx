@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import { setFlats } from '../actions';
 import Flat from '../components/flat';
 
 class FlatList extends Component {
-
   static defaultProps = {
     flats: [{
       name: "Charm at the Steps of Montmartre",
@@ -11,6 +13,12 @@ class FlatList extends Component {
       priceCurrency: "EUR"
     }]
   }
+
+  componentWillMount() {
+    // debugger;
+    this.props.setFlats();
+  }
+
 
   render() {
     return (
@@ -21,4 +29,11 @@ class FlatList extends Component {
   }
 }
 
-export default FlatList;
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators(
+    { setFlats: setFlats },
+    dispatch
+  );
+}
+
+export default connect(null, mapDispatchToProps)(FlatList);

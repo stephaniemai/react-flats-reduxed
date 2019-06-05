@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { createStore, combineReducers } from 'redux';
 
 import '../assets/stylesheets/application.scss';
-import flatReducer from './reducers/flat_reducer';
+import flatReducer from './reducers/flats_reducer';
 
 import App from './components/app';
 
