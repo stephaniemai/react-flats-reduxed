@@ -5,14 +5,14 @@ import { setFlats } from '../actions';
 import Flat from '../components/flat';
 
 class FlatList extends Component {
-  static defaultProps = {
-    flats: [{
-      name: "Charm at the Steps of Montmartre",
-      imageUrl: "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat1.jpg",
-      price: 164,
-      priceCurrency: "EUR"
-    }]
-  }
+  // static defaultProps = {
+  //   flats: [{
+  //     name: "Charm at the Steps of Montmartre",
+  //     imageUrl: "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat1.jpg",
+  //     price: 164,
+  //     priceCurrency: "EUR"
+  //   }]
+  // }
 
   componentWillMount() {
     // debugger;
@@ -36,4 +36,10 @@ function mapDispatchToProps(dispatch) {
   );
 }
 
-export default connect(null, mapDispatchToProps)(FlatList);
+function mapStateToProps(state) {
+  return {
+    flats: state.flats
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(FlatList);
