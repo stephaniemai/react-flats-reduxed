@@ -5,13 +5,15 @@ import { createStore, combineReducers } from 'redux';
 
 import '../assets/stylesheets/application.scss';
 import flatReducer from './reducers/flats_reducer';
+import selectedFlatReducer from './reducers/selected_flat_reducer';
 
 import App from './components/app';
 
 // const root = document.getElementById('root');
 
 const reducers = combineReducers({
-  flats: flatReducer
+  flats: flatReducer,
+  selectedFlat: selectedFlatReducer
 });
 
 ReactDOM.render(

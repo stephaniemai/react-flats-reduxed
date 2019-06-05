@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { setFlats } from '../actions';
-import Flat from '../components/flat';
+import Flat from './flat';
 
 class FlatList extends Component {
   // static defaultProps = {
